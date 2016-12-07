@@ -1,4 +1,4 @@
-const ErrorThrowerFactory = require('cyanide-error').ErrorThrowerFactory
+const ErrorThrowerFactory = require('phoenix-error').ErrorThrowerFactory
 
 /** Builds Policies */
 class PolicyFactory {
