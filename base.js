@@ -31,6 +31,20 @@ class BasePolicy {
 		// Throws unimplemented error
 		throw new Error('Unimplemented')
 	}
+	/**
+	 * [requestParamsBuild build]
+	 * @param  {[type]} requestValidator [description]
+	 * @param  {[type]} args             [description]
+	 * @return {[type]}                  [description]
+	 */
+	static requestParamsBuild(requestValidator, args) {
+        var paramsArr = []
+        args.params.forEach((arg)=> {
+            paramsArr.push(requestValidator.request.params[arg])
+        })
+
+        return paramsArr
+    }
 
 	throwError(){
 		return this.errorThrower.throw()
